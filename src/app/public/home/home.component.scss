@@ -1,0 +1,84 @@
+@import "../../../assets/sass/material-dashboard";
+@import "../../../assets/sass/stars";
+//colors
+
+$golden_grass: goldenrod;
+$color_west_coast_approx: #695217;
+
+
+//fonts
+$font_0: Fjalla One;
+$font_1: sans-serif;
+
+//urls
+$url_0: url(../../../assets/img/home-bg.jpg);
+
+//@extend-elements
+//original selectors
+//.home-section h1::after, .home-section h1::before
+%extend_1 {
+	content: " ";
+	display: block;
+	margin: 0 auto;
+	height: 2px;
+	width: 100%;
+}
+
+
+.home-section {
+	text-align: center;
+	color: $white;
+	background: $black;
+	font-family: $font_0, $font_1;
+	position: relative;
+	overflow: hidden;
+	h1 {
+		font-size: 15vh;
+		margin: 0;
+		text-transform: uppercase;
+		color: $primary-color;
+		font-family: $font_0, $font_1;
+		line-height: 1.5;
+	}
+	h1::after {
+		@extend %extend_1;
+	}
+	h1::before {
+		@extend %extend_1;
+	}
+	p {
+		font-size: 6vh;
+		margin: 2vh 0;
+		text-transform: uppercase;
+	}
+}
+.home-btn {
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: $primary-color;
+	line-height: 3;
+	display: inline-block;
+	line-height: 45px;
+	width: 45px;
+	position:absolute;
+	left:49%;
+	bottom:20px;
+	@include border-radius(50%);
+	/*&:hover {
+		
+	}*/
+}
+.page-scroll {
+	display: block;
+	bottom: 2vh;
+	position: absolute;
+	left: 48vw;
+	height: 8vh;
+	line-height: 8vh;
+	width: 8vh;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+	background: $black;
+	cursor: pointer;
+}

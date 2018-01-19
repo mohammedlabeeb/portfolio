@@ -1,0 +1,137 @@
+@import "../../../assets/sass/material-dashboard";
+$bg-color: rgba(240, 240, 240, 1);
+.profile-section{
+    background: $bg-color;
+    .about-inner {
+        margin: 60px 0;
+        .profile-card {
+            padding: 0;
+            &::after {
+                content: ' ';
+                display: block;
+                clear: both;
+            }
+            &>div {
+                padding: 0;
+            }
+            .mat-card-image{
+                margin: 0;
+                width: 100%;
+            }
+            .card-header{
+                margin: 0;
+                background: $primary-color;
+                color: $white;
+                .mat-card-header-text {
+                    width: 100%;
+                    margin: 0;
+                    text-align: center;
+                    .mat-card-subtitle , .mat-card-title{
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                        color:$white;
+                    }
+                    .mat-card-title {
+                        font-size: 19px;
+                        margin-top: 6px;
+                    }
+                }
+            }
+            .person-info{
+                padding:0;
+                list-style: none;
+                li {
+                    padding: 11.1px 15px;
+                    color : $white;
+                    background: $blue-grey-800;
+                    a{
+                        color : $white;
+                    }
+                    .mat-icon , .fa {
+                        vertical-align: middle;
+                        font-size: 24px;
+                    }
+                    span {
+                        display: inline-block;
+                    }
+                    .icon-left{
+                        width: 50px;
+                    }
+                    .info {
+                        font-weight: bold;
+                    }
+                }
+            }
+            .mat-card-content{
+                margin:0;
+            }
+            .profile-card-header{
+                clear: both;
+            }
+            .mat-card-actions{
+                background: $primary-color;
+                margin: 0;
+                padding: 16px 0;
+                text-align: center;
+                a {
+                    color:$white;
+                    padding: 7px 7px;
+                }
+            }
+                       
+        }
+
+        .story-card {
+            background: $blue-grey-800;
+            color: $white; 
+            padding: 0;
+            .mat-card-header-text {
+                margin: 0;
+                h3{
+                    margin: 0;
+                    padding: 20px 25px 0;
+                }
+            }
+            .mat-card-content {
+                padding: 0 20px 20px;
+            }
+            .mat-card-actions {
+                &::after {
+                    content: " ";
+                    clear: both;
+                    display: block;
+                }
+                color: $white;
+                background: $primary-color;
+                margin: 0;
+                padding: 0;
+                .col{
+                    margin: 0;
+                    padding: 0;
+                    .prof-button {
+                        width: 100%;
+                        background: transparent;
+                        border: 0;
+                        line-height: 55px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        &:hover {
+                            opacity: .8;
+                            color: $red;
+                            background: $white;
+                            opacity: .8;
+                        }
+                        
+                    }
+                    &:last-child {
+                            border-left:1px solid $blue-grey-800;
+                        }
+                }
+                
+            }
+        }
+    }
+    h3 {
+        color: $red;
+    }
+}
